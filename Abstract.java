@@ -1,8 +1,17 @@
 
 public abstract class Abstract {
 
+	protected int cont;
+	
 	public Abstract() {
-		// TODO Auto-generated constructor stub
+				
 	}
-
+	
+	public int size(){
+		return cont;
+	}
+	
+	public boolean isEmpty(){
+		return  (cont==0);
+	}
 }

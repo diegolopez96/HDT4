@@ -2,10 +2,10 @@
 public interface I_Lista<E> {
 
 	
-	public E getLast();
+	public E getFirst();
 	
-	public E removeLast();
+	public E removeFirst();
 
-	public void addLast(E ele);
+	public void addFirst(E ele);
 	
 }

@@ -1,13 +1,33 @@
 
-public class CircularList<E> implements I_Lista<E> {
-
+public class CircularList<E> extends Abstract implements I_Lista<E> {
+	
+	private Node<E> tail=null;
+	private Node<E> temporal=tail.getNext();
 	public CircularList() {
-		// TODO Auto-generated constructor stub
+		cont = 0;
 	}
 
-	public void addLast(E ele){}
+	public void addFirst(E ele){}
 	
-	public <E> getLast(){}
+	public E getFirst(){
+		return tail.getNext().value();
+		
+	}
 	
-	public <E> removeLast(){}
+	public E removeFirst(){
+		if (!isEmpty()){
+			if(tail==tail.getNext())
+			{
+				tail = null;
+			}
+			else
+			{
+				tail.setNext(temporal.getNext())
+				temporal.setNext(null);
+			}
+			cont--;
+		}
+		return temporal.Value();
+	}
+	
 }
