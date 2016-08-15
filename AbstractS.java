@@ -1,4 +1,5 @@
 
+
 public abstract class AbstractS {
 
 	protected int cont;

@@ -1,37 +1,20 @@
+import java.util.*;
 
-public class Lista<E> extends AbstractS implements I_Stack<E> {
+public class StackV<E> extends AbstractS implements I_Stack<E> {
 
-	private I_Lista<E> pila;
+	private Vector<E> pila;
 	
-	public Lista(int num) {
+	public StackV() {
 		// TODO Auto-generated constructor stub
-		
-		if (num == 1)
-		{
-			pila = new SinglyLinkedList<E>();
-		}
-		if (num == 2)
-		{
-			pila = new DoublyLinkedList<E>();
-		}	
-		if (num == 3)
-		{
-			pila =new CircularList<E>();
-		}
-		else
-		{
-			pila = new SinglyLinkedList<E>();
-		}
-		
-		
+		cont = 0;
+		pila = new Vector<E>();
 	}
 
 	@Override
-	public void Push(E element) 
-	{
+	public void Push(E element) {
 		// TODO Auto-generated method stub
-		pila.addFirst(element);
 		cont++;
+		pila.add(0, element);
 	}
 
 	@Override
@@ -39,8 +22,7 @@ public class Lista<E> extends AbstractS implements I_Stack<E> {
 		// TODO Auto-generated method stub
 		if (!isEmpty()) 
 		{
-			cont--;
-			return pila.removeFirst();
+			return pila.remove(0);
 		}
 		return null;
 	}

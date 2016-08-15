@@ -34,4 +34,5 @@ public interface I_Stack <T>{
 	 * @return True si la pila está vacía
 	 */
 	public boolean IsEmpty();
+
 }

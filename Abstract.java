@@ -14,4 +14,5 @@ public abstract class Abstract {
 	public boolean isEmpty(){
 		return  (cont==0);
 	}
+
 }
