@@ -1,16 +1,22 @@
 
 public class CircularList<E> extends Abstract implements I_Lista<E> {
 	
-	private Node<E> tail=null;
+	private Node<E> tail;
 	private Node<E> temporal=tail.getNext();
-	public CircularList() {
+	
+	public CircularList() 
+	{
+	    tail = null;
 		cont = 0;
 	}
 
-	public void addFirst(E ele){}
+	public void addFirst(E ele){
+		
+	}
 	
-	public E getFirst(){
-		return tail.getNext().value();
+	public E getFirst() 
+	{
+		return (E) tail.getNext().getVal();
 		
 	}
 	
@@ -22,12 +28,12 @@ public class CircularList<E> extends Abstract implements I_Lista<E> {
 			}
 			else
 			{
-				tail.setNext(temporal.getNext())
-				temporal.setNext(null);
+				tail.setNext();
+				temporal.setNext();
 			}
 			cont--;
 		}
-		return temporal.Value();
+		return temporal.getVal();
 	}
 	
 }
